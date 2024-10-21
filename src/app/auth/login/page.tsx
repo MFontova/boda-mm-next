@@ -36,24 +36,26 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
-        <button type="submit">Login</button>
-      </form>
-      {error && <p>{error}</p>}
-    </div>
+    <main className="h-full flex flex-col justify-center">
+      <div className="flex flex-col items-center p-10 border max-w-xl mx-auto my-auto rounded-lg shadow-md bg-white gap-5">
+        <h1 className="text-3xl text-center">Benvinguts a la nostra boda - Mariona i Marc</h1>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 items-center">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+          <button type="submit" className="border rounded-full bg-[#c8b79f] text-white hover:shadow-md max-w-fit px-3">Inicia sessió</button>
+        </form>
+        {error && <p>{error}</p>}
+      </div>
+    </main>
   );
 }

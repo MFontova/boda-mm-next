@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Grenze, Cinzel_Decorative, Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const grenze = Grenze({
+  weight: "700",
+  subsets: ['latin'],
+  display: "swap"
+})
+
+const cinzelDecorative = Cinzel_Decorative({
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap"
+})
+
+const montserratAlternates = Montserrat_Alternates({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserratAlternates.className} antialiased`}
       >
         {children}
       </body>
