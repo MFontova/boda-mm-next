@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Grenze, Cinzel_Decorative, Montserrat_Alternates } from "next/font/google";
+import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 
-const grenze = Grenze({
-  weight: "700",
-  subsets: ['latin'],
-  display: "swap"
-})
+// const grenze = Grenze({
+//   weight: "700",
+//   subsets: ['latin'],
+//   display: "swap"
+// })
 
-const cinzelDecorative = Cinzel_Decorative({
-  weight: "700",
-  subsets: ["latin"],
-  display: "swap"
-})
+// const cinzelDecorative = Cinzel_Decorative({
+//   weight: "700",
+//   subsets: ["latin"],
+//   display: "swap"
+// })
 
 const montserratAlternates = Montserrat_Alternates({
   weight: "500",
@@ -32,9 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`${montserratAlternates.className} antialiased`}
-      >
+      <body className={`${montserratAlternates.className} antialiased`}>
         {children}
       </body>
     </html>
